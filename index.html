@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- connect tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Job Application Tracker</title>
+    <style>
+        body {
+            background-color: #f8fafc;
+        }
+    </style>
 </head>
+
 <body>
-    start assignment
+    <!-- header section -->
+    <header class="w-[80%] mx-auto border-b-2 border-b-[#ebebed]">
+        <h1 class="text-3xl text-[#002C5C] font-bold my-6">Job Application Tracker</h1>
+        <div class="grid grid-cols-3 gap-5 mb-7">
+            <div class="bg-[#ffffff] p-5 rounded-xl border-[#f4f5f6] border-2">
+                <p class="text-[#323B49] font-medium">Total</p>
+                <p class="text-[#002c5c] font-bold text-2xl">8</p>
+            </div>
+            <div class="bg-[#ffffff] p-5 rounded-xl border-[#f4f5f6] border-2">
+                <p class="text-[#323B49] font-medium">Interview</p>
+                <p class="text-[#5acea8] font-bold text-2xl">0</p>
+            </div>
+            <div class="bg-[#ffffff] p-5 rounded-xl border-[#f4f5f6] border-2">
+                <p class="text-[#323B49] font-medium">Rejected</p>
+                <p class="text-[#ef4444] font-bold text-2xl">0</p>
+            </div>
+        </div>
+    </header>
 </body>
+
 </html>
