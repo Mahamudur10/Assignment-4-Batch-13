@@ -42,3 +42,27 @@ function toggleStyle(id){
     selected.classList.remove('bg-[#ffffff]','text-[#64748b]')
     selected.classList.add('bg-[#3b82f6]','text-[#ffffff]')
 }
+
+// event deligation
+mainContainer.addEventListener('click',function(event){
+    const parentNode = event.target.parentNode.parentNode;
+    const jobName = parentNode.querySelector('.job-name').innerText;
+    const jobSkill = parentNode.querySelector('.job-skill').innerText
+    const jobType = parentNode.querySelector('.job-type').innerText
+    const Applied = parentNode.querySelector('.apply').innerText
+    const Describe = parentNode.querySelector('.description').innerText
+    // console.log(Describe)
+    const cardInfo = {
+        jobName,
+        jobSkill,
+        jobType,
+        Applied,
+        Describe
+    }
+
+    const JobExist = interviewList.find(item => item.jobName == cardInfo.jobName)
+    if(!JobExist){
+        interviewList.push(cardInfo)
+        console.log(interviewList)
+    }
+})
