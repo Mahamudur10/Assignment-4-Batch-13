@@ -52,12 +52,9 @@
             <p class="font-medium text-[#adb1b8]">8 jobs</p>
         </div>
         <div class="flex gap-3 mb-4">
-            <button
-                class="bg-[#3b82f6] border-[#f4f5f6] border font-semibold rounded-md text-[#ffffff] px-7 py-2 cursor-pointer">All</button>
-            <button
-                class="bg-[#ffffff] border-[#f4f5f6] border font-medium rounded-md text-[#64748b] px-7 py-2 cursor-pointer">Interview</button>
-            <button
-                class="bg-[#ffffff] border-[#f4f5f6] border font-medium rounded-md text-[#64748b] px-7 py-2 cursor-pointer">Rejected</button>
+            <button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="bg-[#3b82f6] border-[#f4f5f6] border font-semibold rounded-md text-[#ffffff] px-7 py-2 cursor-pointer">All</button>
+            <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="bg-[#ffffff] border-[#f4f5f6] border font-medium rounded-md text-[#64748b] px-7 py-2 cursor-pointer">Interview</button>
+            <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="bg-[#ffffff] border-[#f4f5f6] border font-medium rounded-md text-[#64748b] px-7 py-2 cursor-pointer">Rejected</button>
         </div>
         <!-- card section -->
         <section id="allCards" class="space-y-4">
