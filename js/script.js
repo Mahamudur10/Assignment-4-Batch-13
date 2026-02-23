@@ -40,6 +40,14 @@ function toggleStyle(id) {
 
     selected.classList.remove('bg-[#ffffff]', 'text-[#64748b]')
     selected.classList.add('bg-[#3b82f6]', 'text-[#ffffff]')
+
+    if(id == 'interview-filter-btn'){
+        allCardSection.classList.add('hidden')
+        filterSection.classList.remove('hidden')
+    }else if(id == 'all-filter-btn'){
+        allCardSection.classList.remove('hidden')
+        filterSection.classList.add('hidden')
+    }
 }
 
 // event deligation
@@ -53,22 +61,24 @@ mainContainer.addEventListener('click', function (event) {
         const jobName = parentNode.querySelector('.job-name').innerText;
         const jobSkill = parentNode.querySelector('.job-skill').innerText
         const jobType = parentNode.querySelector('.job-type').innerText
-        const Applied = parentNode.querySelector('.apply').innerText
+        const apply = parentNode.querySelector('.apply').innerText
         const Describe = parentNode.querySelector('.description').innerText
         // console.log(Describe)
+        parentNode.querySelector('.apply').innerText = 'INTERVIEW'
         const cardInfo = {
             jobName,
             jobSkill,
             jobType,
-            Applied,
+            apply:'INTERVIEW',
             Describe
         }
 
         const JobExist = interviewList.find(item => item.jobName == cardInfo.jobName)
-        parentNode.querySelector('.apply').innerText = 'INTERVIEW'
+        
         if (!JobExist) {
             interviewList.push(cardInfo)
         }
+        calculatorCount()
         renderInterview()
     }
 })
@@ -82,7 +92,7 @@ function renderInterview() {
         div.innerHTML = `
         <div class="flex justify-between items-center">
                     <div>
-                        <h2 class="job-name font-semibold text-[#002c5c] text-[18px]">Mobile First Corp</h2>
+                        <h2 class="job-name font-semibold text-[#002c5c] text-[18px]">${interview.jobName}</h2>
                         <p class="job-skill font-normal text-[#64748b]">React Native Developer</p>
                     </div>
                     <div class="border border-[#f1f2f4] p-1 rounded-full text-[#64748b]"><i
@@ -96,7 +106,7 @@ function renderInterview() {
                         $130,000 - $175,000</p>
                 </div>
                 <div>
-                    <span class="apply text-[#002c5c] font-medium bg-[#eef4ff] px-3 py-2 rounded-sm">Not Applied</span>
+                    <span class="apply text-[#002c5c] font-medium bg-[#eef4ff] px-3 py-2 rounded-sm">${interview.apply}</span>
                     <p class="description text-[#313a49] pt-1">Build cross-platform mobile applications using React Native. Work on
                         products used by millions of
                         users worldwide.</p>
