@@ -30,25 +30,26 @@
     <!-- header section -->
     <header class="w-[80%] mx-auto border-b-2 border-b-[#ebebed]">
         <h1 class="text-3xl text-[#002C5C] font-bold my-6">Job Application Tracker</h1>
-        <div class="grid grid-cols-3 gap-5 mb-7">
-            <div class="bg-[#ffffff] p-5 rounded-xl border-[#f4f5f6] border-2">
-                <p class="text-[#323B49] font-medium">Total</p>
-                <p id="total" class="text-[#002c5c] font-bold text-2xl">0</p>
-            </div>
-            <div class="bg-[#ffffff] p-5 rounded-xl border-[#f4f5f6] border-2">
-                <p class="text-[#323B49] font-medium">Interview</p>
-                <p id="interviewCount" class="text-[#5acea8] font-bold text-2xl">0</p>
-            </div>
-            <div class="bg-[#ffffff] p-5 rounded-xl border-[#f4f5f6] border-2">
-                <p class="text-[#323B49] font-medium">Rejected</p>
-                <p id="rejectedCount" class="text-[#ef4444] font-bold text-2xl">0</p>
-            </div>
+       <div class="grid grid-cols-3 gap-5 mb-7">
+    <div class="bg-[#ffffff] p-5 rounded-xl border-[#f4f5f6] border-2 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+        <p class="text-[#323B49] font-medium">Total</p>
+        <p id="total" class="text-[#002c5c] font-bold text-2xl">0</p>
+    </div>
+    <div class="bg-[#ffffff] p-5 rounded-xl border-[#f4f5f6] border-2 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+        <p class="text-[#323B49] font-medium">Interview</p>
+        <p id="interviewCount" class="text-[#5acea8] font-bold text-2xl">0</p>
+    </div>
+    <div class="bg-[#ffffff] p-5 rounded-xl border-[#f4f5f6] border-2 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+        <p class="text-[#323B49] font-medium">Rejected</p>
+        <p id="rejectedCount" class="text-[#ef4444] font-bold text-2xl">0</p>
+    </div>
+</div>
         </div>
     </header>
 
 
     <main class="w-[80%] mx-auto">
-         <div class="flex justify-between my-6">
+        <div class="flex justify-between my-6">
             <p class="text-xl text-[#002c5c] font-semibold">Available Jobs</p>
             <p class="font-medium text-[#adb1b8]">8 jobs</p>
         </div>
@@ -75,14 +76,15 @@
 
 
         <!-- filtered card -->
-         <section id="filtered-section" class="hidden space-y-4">
-            
-         </section>
+        <section id="filtered-section" class="hidden space-y-4">
+
+        </section>
 
         <!-- card section -->
         <section id="allCards" class="space-y-4">
             <!-- card-1 -->
-            <div class="card bg-[#ffffff] p-6 rounded-lg space-y-5">
+            <div
+                class="card bg-[#ffffff] p-6 rounded-lg space-y-5 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                 <div class="flex justify-between items-center">
                     <div>
                         <h2 class="job-name font-semibold text-[#002c5c] text-[18px]">Mobile First Corp</h2>
@@ -102,19 +104,18 @@
                     <span class="apply text-[#002c5c] font-medium bg-[#eef4ff] px-3 py-2 rounded-sm">Not Applied</span>
                     <p class="description text-[#313a49] pt-1">Build cross-platform mobile applications using React
                         Native. Work on
-                        products used by millions of
-                        users worldwide.</p>
+                        products used by millions of users worldwide.</p>
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="interview-btn text-[#10b981] border-2 border-[#10b981] rounded-lg font-semibold px-3 py-2">interview</button>
+                        class="interview-btn text-[#10b981] border-2 border-[#10b981] rounded-lg font-semibold px-3 py-2 cursor-pointer hover:bg-[#0c7354] hover:text-white transition-colors duration-300">interview</button>
                     <button
-                        class="rejected-btn text-[#ef4444] border-2 border-[#ef4444] rounded-lg font-semibold px-3 py-2">Rejected</button>
+                        class="rejected-btn text-[#ef4444] border-2 border-[#ef4444] rounded-lg font-semibold px-3 py-2 cursor-pointer hover:bg-[#991b1b] hover:text-white transition-colors duration-300">Rejected</button>
                 </div>
             </div>
 
             <!-- card-2 -->
-            <div class="card bg-[#ffffff] p-6 rounded-lg space-y-5">
+            <div class="card bg-[#ffffff] p-6 rounded-lg space-y-5 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                 <div class="flex justify-between items-center">
                     <div>
                         <h2 class="job-name font-semibold text-[#002c5c] text-[18px]">WebFlow Agency</h2>
@@ -137,13 +138,13 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="interview-btn text-[#10b981] border-2 border-[#10b981] rounded-lg font-semibold px-3 py-2">interview</button>
+                        class="interview-btn text-[#10b981] border-2 border-[#10b981] rounded-lg font-semibold px-3 py-2 cursor-pointer hover:bg-[#0c7354] hover:text-white transition-colors duration-300">interview</button>
                     <button
-                        class="rejected-btn text-[#ef4444] border-2 border-[#ef4444] rounded-lg font-semibold px-3 py-2">Rejected</button>
+                        class="rejected-btn text-[#ef4444] border-2 border-[#ef4444] rounded-lg font-semibold px-3 py-2 cursor-pointer hover:bg-[#991b1b] hover:text-white transition-colors duration-300">Rejected</button>
                 </div>
             </div>
             <!-- card-3 -->
-            <div class="card bg-[#ffffff] p-6 rounded-lg space-y-5">
+            <div class="card bg-[#ffffff] p-6 rounded-lg space-y-5 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                 <div class="flex justify-between items-center">
                     <div>
                         <h2 class="job-name font-semibold text-[#002c5c] text-[18px]">DataViz Solutions</h2>
@@ -167,13 +168,13 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="interview-btn text-[#10b981] border-2 border-[#10b981] rounded-lg font-semibold px-3 py-2">interview</button>
+                        class="interview-btn text-[#10b981] border-2 border-[#10b981] rounded-lg font-semibold px-3 py-2 cursor-pointer hover:bg-[#0c7354] hover:text-white transition-colors duration-300">interview</button>
                     <button
-                        class="rejected-btn text-[#ef4444] border-2 border-[#ef4444] rounded-lg font-semibold px-3 py-2">Rejected</button>
+                        class="rejected-btn text-[#ef4444] border-2 border-[#ef4444] rounded-lg font-semibold px-3 py-2 cursor-pointer hover:bg-[#991b1b] hover:text-white transition-colors duration-300">Rejected</button>
                 </div>
             </div>
             <!-- card-4 -->
-            <div class="card bg-[#ffffff] p-6 rounded-lg space-y-5">
+            <div class="card bg-[#ffffff] p-6 rounded-lg space-y-5 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                 <div class="flex justify-between items-center">
                     <div>
                         <h2 class="job-name font-semibold text-[#002c5c] text-[18px]">CloudFirst Inc</h2>
@@ -196,13 +197,13 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="interview-btn text-[#10b981] border-2 border-[#10b981] rounded-lg font-semibold px-3 py-2">interview</button>
+                        class="interview-btn text-[#10b981] border-2 border-[#10b981] rounded-lg font-semibold px-3 py-2 cursor-pointer hover:bg-[#0c7354] hover:text-white transition-colors duration-300">interview</button>
                     <button
-                        class="rejected-btn text-[#ef4444] border-2 border-[#ef4444] rounded-lg font-semibold px-3 py-2">Rejected</button>
+                        class="rejected-btn text-[#ef4444] border-2 border-[#ef4444] rounded-lg font-semibold px-3 py-2 cursor-pointer hover:bg-[#991b1b] hover:text-white transition-colors duration-300">Rejected</button>
                 </div>
             </div>
             <!-- card-5 -->
-            <div class="card bg-[#ffffff] p-6 rounded-lg space-y-5">
+            <div class="card bg-[#ffffff] p-6 rounded-lg space-y-5 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                 <div class="flex justify-between items-center">
                     <div>
                         <h2 class="job-name font-semibold text-[#002c5c] text-[18px]">Innovation Labs</h2>
@@ -225,13 +226,13 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="interview-btn text-[#10b981] border-2 border-[#10b981] rounded-lg font-semibold px-3 py-2">interview</button>
+                        class="interview-btn text-[#10b981] border-2 border-[#10b981] rounded-lg font-semibold px-3 py-2 cursor-pointer hover:bg-[#0c7354] hover:text-white transition-colors duration-300">interview</button>
                     <button
-                        class="rejected-btn text-[#ef4444] border-2 border-[#ef4444] rounded-lg font-semibold px-3 py-2">Rejected</button>
+                        class="rejected-btn text-[#ef4444] border-2 border-[#ef4444] rounded-lg font-semibold px-3 py-2 cursor-pointer hover:bg-[#991b1b] hover:text-white transition-colors duration-300">Rejected</button>
                 </div>
             </div>
             <!-- card-6 -->
-            <div class="card bg-[#ffffff] p-6 rounded-lg space-y-5">
+            <div class="card bg-[#ffffff] p-6 rounded-lg space-y-5 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                 <div class="flex justify-between items-center">
                     <div>
                         <h2 class="job-name font-semibold text-[#002c5c] text-[18px]">MegaCorp Solutions</h2>
@@ -255,13 +256,13 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="interview-btn text-[#10b981] border-2 border-[#10b981] rounded-lg font-semibold px-3 py-2">interview</button>
+                        class="interview-btn text-[#10b981] border-2 border-[#10b981] rounded-lg font-semibold px-3 py-2 cursor-pointer hover:bg-[#0c7354] hover:text-white transition-colors duration-300">interview</button>
                     <button
-                        class="rejected-btn text-[#ef4444] border-2 border-[#ef4444] rounded-lg font-semibold px-3 py-2">Rejected</button>
+                        class="rejected-btn text-[#ef4444] border-2 border-[#ef4444] rounded-lg font-semibold px-3 py-2 cursor-pointer hover:bg-[#991b1b] hover:text-white transition-colors duration-300">Rejected</button>
                 </div>
             </div>
             <!-- card-7 -->
-            <div class="card bg-[#ffffff] p-6 rounded-lg space-y-5">
+           <div class="card bg-[#ffffff] p-6 rounded-lg space-y-5 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                 <div class="flex justify-between items-center">
                     <div>
                         <h2 class="job-name font-semibold text-[#002c5c] text-[18px]">StartupXYZ</h2>
@@ -285,13 +286,13 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="interview-btn text-[#10b981] border-2 border-[#10b981] rounded-lg font-semibold px-3 py-2">interview</button>
+                        class="interview-btn text-[#10b981] border-2 border-[#10b981] rounded-lg font-semibold px-3 py-2 cursor-pointer hover:bg-[#0c7354] hover:text-white transition-colors duration-300">interview</button>
                     <button
-                        class="rejected-btn text-[#ef4444] border-2 border-[#ef4444] rounded-lg font-semibold px-3 py-2">Rejected</button>
+                        class="rejected-btn text-[#ef4444] border-2 border-[#ef4444] rounded-lg font-semibold px-3 py-2 cursor-pointer hover:bg-[#991b1b] hover:text-white transition-colors duration-300">Rejected</button>
                 </div>
             </div>
             <!-- card-8 -->
-            <div class="card bg-[#ffffff] p-6 rounded-lg space-y-5">
+            <div class="card bg-[#ffffff] p-6 rounded-lg space-y-5 mb-3 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                 <div class="flex justify-between items-center">
                     <div>
                         <h2 class="job-name font-semibold text-[#002c5c] text-[18px]">TechCorp Industries</h2>
@@ -315,9 +316,9 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="interview-btn text-[#10b981] border-2 border-[#10b981] rounded-lg font-semibold px-3 py-2">interview</button>
+                        class="interview-btn text-[#10b981] border-2 border-[#10b981] rounded-lg font-semibold px-3 py-2 cursor-pointer hover:bg-[#0c7354] hover:text-white transition-colors duration-300">interview</button>
                     <button
-                        class="rejected-btn text-[#ef4444] border-2 border-[#ef4444] rounded-lg font-semibold px-3 py-2">Rejected</button>
+                        class="rejected-btn text-[#ef4444] border-2 border-[#ef4444] rounded-lg font-semibold px-3 py-2 cursor-pointer hover:bg-[#991b1b] hover:text-white transition-colors duration-300">Rejected</button>
                 </div>
             </div>
 
